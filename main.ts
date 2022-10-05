@@ -1,9 +1,22 @@
 let Número_1 = 0
 let Número_2 = 0
 let Número_3 = 0
+let Mayor = 0
+let Medio = 0
+let Menor = 0
 input.onButtonPressed(Button.A, function () {
-    if (Número_1 != 0 && Número_2 != 0) {
-        basic.showIcon(IconNames.No)
+    if (Número_1 > Número_2 && Número_1 > Número_3) {
+        Mayor = Número_1
+        if (Número_2 > Número_3) {
+            Medio = Número_2
+            Menor = Número_3
+        } else {
+            Medio = Número_3
+            Menor = Número_2
+        }
+        basic.showNumber(Mayor)
+        basic.showNumber(Medio)
+        basic.showNumber(Menor)
     } else {
     	
     }
