@@ -17,8 +17,34 @@ input.onButtonPressed(Button.A, function () {
         basic.showNumber(Mayor)
         basic.showNumber(Medio)
         basic.showNumber(Menor)
+    }
+    if (Número_2 > Número_1 && Número_2 > Número_3) {
+        Mayor = Número_2
+        if (Número_1 > Número_3) {
+            Medio = Número_1
+            Menor = Número_3
+        } else {
+            Medio = Número_3
+            Menor = Número_1
+        }
+        basic.showNumber(Mayor)
+        basic.showNumber(Medio)
+        basic.showNumber(Menor)
+    }
+    if (Número_3 > Número_1 && Número_3 > Número_2) {
+        Mayor = Número_3
+        if (Número_1 > Número_2) {
+            Medio = Número_1
+            Menor = Número_2
+        } else {
+            Medio = Número_1
+            Menor = Número_2
+        }
+        basic.showNumber(Mayor)
+        basic.showNumber(Medio)
+        basic.showNumber(Menor)
     } else {
-    	
+        basic.showIcon(IconNames.No)
     }
 })
 input.onGesture(Gesture.Shake, function () {
